@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/fragmentSplashScreen">
+
+    <fragment
+        android:id="@+id/fragmentAssignExercise"
+        android:name="com.example.zoran.FragmentAssignExercise"
+        android:label="FragmentAssignExercise" />
+    <fragment
+        android:id="@+id/fragmentExerciseCategory"
+        android:name="com.example.zoran.exercise.FragmentExerciseCategory"
+        android:label="FragmentExerciseCategory" >
+        <action
+            android:id="@+id/action_fragmentExerciseCategory_to_fragmentExercises2"
+            app:destination="@id/fragmentExercises2"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentExerciseDetails"
+        android:name="com.example.zoran.FragmentExerciseDetails"
+        android:label="FragmentExerciseDetails" >
+        <action
+            android:id="@+id/action_fragmentExerciseDetails_to_fragmentStaffPatientExercise"
+            app:destination="@id/fragmentStaffPatientExercise"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/fragmentExerciseDetails"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_fragmentExerciseDetails_to_fragmentPatientInput"
+            app:destination="@id/fragmentPatientInput"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentLoginSelection"
+        android:name="com.example.zoran.FragmentLoginSelection"
+        android:label="FragmentLoginSelection">
+        <action
+            android:id="@+id/action_fragmentLoginSelection_to_fragmentStaffSignIn"
+            app:destination="@id/fragmentStaffSignIn"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentLoginSelection"
+            />
+        <action
+            android:id="@+id/action_fragmentLoginSelection_to_fragmentPatientSignin"
+            app:destination="@id/fragmentPatientSignin"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentLoginSelection"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentPatientInfo"
+        android:name="com.example.zoran.FragmentPatientInfo"
+        android:label="FragmentPatientInfo" >
+        <action
+            android:id="@+id/action_fragmentPatientInfo_to_fragmentDiagnosis"
+            app:destination="@id/fragmentDiagnosis"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_fragmentPatientInfo_to_fragmentVitalSigns"
+            app:destination="@id/fragmentVitalSigns"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_fragmentPatientInfo_to_fragmentHistory"
+            app:destination="@id/fragmentHistory"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_fragmentPatientInfo_to_fragmentStaffPatientExercise"
+            app:destination="@id/fragmentStaffPatientExercise"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPatientInput"
+        android:name="com.example.zoran.FragmentPatientInput"
+        android:label="FragmentPatientInput" />
+    <fragment
+        android:id="@+id/fragmentPatientSignin"
+        android:name="com.example.zoran.auth.FragmentPatientSignin"
+        android:label="FragmentPatientSignin" >
+        <action
+            android:id="@+id/action_fragmentPatientSignin_to_fragmentPatientsHome"
+            app:destination="@id/fragmentPatientsHome"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentPatientSignin"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPatients"
+        android:name="com.example.zoran.fragmentStaffSide.FragmentPatients"
+        android:label="FragmentPatients" >
+        <action
+            android:id="@+id/action_fragmentPatients_to_fragmentPatientInfo"
+            app:destination="@id/fragmentPatientInfo"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentStaffHome"
+        android:name="com.example.zoran.FragmentStaffHome"
+        android:label="FragmentStaffHome" >
+        <action
+            android:id="@+id/action_fragmentStaffHome_to_fragmentPatients"
+            app:destination="@id/fragmentPatients"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_fragmentStaffHome_to_fragmentExerciseCategory"
+            app:destination="@id/fragmentExerciseCategory"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_fragmentStaffHome_to_fragmentLoginSelection"
+            app:destination="@id/fragmentLoginSelection"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentStaffHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentStaffSignIn"
+        android:name="com.example.zoran.FragmentStaffSignIn"
+        android:label="FragmentStaffSignIn" >
+        <action
+            android:id="@+id/action_fragmentStaffSignIn_to_fragmentStaffHome"
+            app:destination="@id/fragmentStaffHome"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentStaffSignIn"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentVitalSigns"
+        android:name="com.example.zoran.fragmentPatientSide.FragmentVitalSigns"
+        android:label="FragmentVitalSigns" >
+        <action
+            android:id="@+id/action_fragmentVitalSigns_to_fragmentAddVitalSigns"
+            app:destination="@id/fragmentAddVitalSigns"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSplashScreen"
+        android:name="com.example.zoran.FragmentSplashScreen"
+        android:label="FragmentSplashScreen" >
+        <action
+            android:id="@+id/action_fragmentSplashScreen_to_fragmentLoginSelection"
+            app:destination="@id/fragmentLoginSelection"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentSplashScreen"
+            />
+        <action
+            android:id="@+id/action_fragmentSplashScreen_to_fragmentPatientsHome"
+            app:destination="@id/fragmentPatientsHome"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentSplashScreen" />
+        <action
+            android:id="@+id/action_fragmentSplashScreen_to_fragmentStaffHome"
+            app:destination="@id/fragmentStaffHome"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentSplashScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDiagnosis"
+        android:name="com.example.zoran.diagnosis.FragmentDiagnosis"
+        android:label="FragmentDiagnosis" >
+        <action
+            android:id="@+id/action_fragmentDiagnosis_to_fragmentAddDiagnosis"
+            app:destination="@id/fragmentAddDiagnosis"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddVitalSigns"
+        android:name="com.example.zoran.fragmentPatientSide.FragmentAddVitalSigns"
+        android:label="FragmentAddVitalSigns" />
+    <fragment
+        android:id="@+id/fragmentAddDiagnosis"
+        android:name="com.example.zoran.diagnosis.FragmentAddDiagnosis"
+        android:label="FragmentAddDiagnosis" />
+    <fragment
+        android:id="@+id/fragmentHistory"
+        android:name="com.example.zoran.FragmentHistory"
+        android:label="FragmentHistory" />
+    <fragment
+        android:id="@+id/fragmentPatientsHome"
+        android:name="com.example.zoran.fragmentPatientSide.FragmentPatientsHome"
+        android:label="FragmentPatientsHome" >
+        <action
+            android:id="@+id/action_fragmentPatientsHome_to_fragmentVitalSigns"
+            app:destination="@id/fragmentVitalSigns"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_fragmentPatientsHome_to_fragmentHistory"
+            app:destination="@id/fragmentHistory"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_fragmentPatientsHome_to_fragmentPatientExercise"
+            app:destination="@id/fragmentPatientExercise"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_fragmentPatientsHome_to_fragmentLoginSelection"
+            app:destination="@id/fragmentLoginSelection"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentPatientsHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentStaffPatientExercise"
+        android:name="com.example.zoran.fragmentStaffSide.FragmentStaffPatientExercise"
+        android:label="FragmentStaffPatientExercise" >
+        <action
+            android:id="@+id/action_fragmentStaffPatientExercise_to_fragmentExerciseCategory"
+            app:destination="@id/fragmentExerciseCategory"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_fragmentStaffPatientExercise_to_fragmentExerciseDetails"
+            app:destination="@id/fragmentExerciseDetails"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentExercises2"
+        android:name="com.example.zoran.FragmentExercises"
+        android:label="FragmentExercises" >
+        <action
+            android:id="@+id/action_fragmentExercises2_to_fragmentExerciseDetails"
+            app:destination="@id/fragmentExerciseDetails"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPatientExercise"
+        android:name="com.example.zoran.FragmentPatientExercise"
+        android:label="FragmentPatientExercise" >
+        <action
+            android:id="@+id/action_fragmentPatientExercise_to_fragmentExerciseDetails"
+            app:destination="@id/fragmentExerciseDetails" />
+    </fragment>
+
+</navigation>

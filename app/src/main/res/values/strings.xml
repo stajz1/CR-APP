@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CRCoachAtHome</string>
+    <string name="login">Login</string>
+    <string name="name">Excerice</string>
+
+    <string-array name="vital_signs">
+
+        <item>Temperatur</item>
+        <item>Puls</item>
+        <item>Atmungsfrequenz</item>
+        <item>Blutdruck</item>
+        <item>Gewicht</item>
+
+    </string-array>
+
+</resources>
