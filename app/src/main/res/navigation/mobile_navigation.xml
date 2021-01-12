@@ -57,6 +57,9 @@
             app:popUpToInclusive="true"
             app:popUpTo="@id/fragmentLoginSelection"
             />
+        <action
+            android:id="@+id/action_fragmentLoginSelection_to_fragmenttermsandcon"
+            app:destination="@id/fragmenttermsandcon" />
     </fragment>
 
     <fragment
@@ -261,5 +264,9 @@
             android:id="@+id/action_fragmentPatientExercise_to_fragmentExerciseDetails"
             app:destination="@id/fragmentExerciseDetails" />
     </fragment>
+    <fragment
+        android:id="@+id/fragmenttermsandcon"
+        android:name="com.example.zoran.Fragmenttermsandcon"
+        android:label="Fragmenttermsandcon" />
 
 </navigation>

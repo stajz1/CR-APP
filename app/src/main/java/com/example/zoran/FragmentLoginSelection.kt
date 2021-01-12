@@ -1,5 +1,6 @@
 package com.example.zoran
 
+import android.graphics.Paint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,6 +28,13 @@ class FragmentLoginSelection: Fragment() {
             findNavController().navigate(R.id.action_fragmentLoginSelection_to_fragmentStaffSignIn)
         }
 
+        root?.textView26?.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentLoginSelection_to_fragmenttermsandcon)
+        }
+
+        root?.textView26?.let {
+            it.paintFlags = it.paintFlags or(Paint.UNDERLINE_TEXT_FLAG)
+        }
         return root;
     }
 
