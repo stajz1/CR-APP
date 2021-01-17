@@ -62,20 +62,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="First Title"
+                android:text="1. Verantwortlicher"
                 android:textStyle="bold"
                 android:textSize="16sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description...\n"
+                android:text="- Verantwortlich für die Datenbearbeitungen, die hier beschrieben werden, ist die Berner Fachhochschule BFH, Departement Technik und Informatik Quellgasse 21 2501 Biel,  wovon für den vorliegenden Prototyp verantwortlich sind: Herr Zoran Stajcic, Student am Studiengang Medizininformatik (zoran.stajcic@students.bfh.ch) Herr Simon Adams, Student am Studiengang Medizinformatik
+                (simon.adams@students.bfh.ch).
+                \n"
                 android:textSize="14sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="second Title"
+                android:text="2. Erhebung und Bearbeitung von Personendaten"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginTop="5dp"/>
@@ -83,7 +85,27 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SecondDescription..."
+                android:text="-	Der gesamte Prototyp ist zu Forschungszwecken errichtet worden und geht nicht in die kommerzielle Benutzung zu diesem Zeitpunkt. Benutzer und Benutzerinnen dieses Produktes wurden im Vorfeld informiert und deren Daten durch ihre ausdrückliche Zustimmung in das Produkt aufgenommen. Es werden während des Gebrauchs des Prototyps keine Personendaten erhoben und deren Bearbeitung limitiert sich auf die verfügbaren Funktionen zu Forschungszwecken. Rückschlüsse auf Personen, Standorte, Geräte oder Ortsangaben sind nicht möglich. Für gesundheitsbezogene Daten werden keinerlei Rückschlüsse ermöglicht und es kann aus ihnen kein Personenbezug hergestellt werden.
+
+Der Prototyp gliedert sich in zwei hauptsächliche Komponenten:
+(A) ein System zur Verwaltung von individuellen Rehabilitationsprogrammen bestehend aus anonymisierten Patientendaten die im Vorfeld vom Berner Reha Zentrum zur Verfügung gestellt wurden
+(B) ein System zur Persistierung und Speicherung von Transaktionen und Daten im Zusammenhang mit dem in Punkt A erwähnten Rehabilitationsprogrammen.
+\n"
+                android:textSize="14sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Rechte der betroffenen Person "
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-	Sie haben das Recht auf Auskunft, Berichtigung, Löschung, oder Herausgabe Ihrer Daten. Weiter steht Ihnen das Recht auf Einschränkung der Datenbearbeitung und das Recht auf Widerspruch gegen die Datenbearbeitung zu. Sie haben zudem das Recht, Einwilligungen zu widerrufen, ohne dass dadurch die Rechtmässigkeit der bis zum Widerruf erfolgten Datenbearbeitung berührt ist. Diese Rechte greifen, soweit Personendaten vorhanden sind. Das dem App-System zugrundeliegende «privacy by design», welches mit innovativen kryptografischen Methoden und einer dezentralisierten Datenbearbeitung darauf ausgerichtet ist, dass möglichst keine Angaben zu bestimmten oder bestimmbaren Personen (Personendaten) vorhanden sind, verhindert dies jedoch weitestmöglich. Aus diesem Grund ist es der BFH beispielsweise nicht möglich, Auskunft über die zu einer bestimmten Person erfassten Annährungsereignisse zu erteilen oder diese Daten zu korrigieren. Die BFH kann diese Daten nicht einsehen, da sie lediglich auf den Mobiltelefonen gespeichert werden.
+-	Die Ausübung der Rechte setzt voraus, dass Sie Ihre Identität eindeutig nachweisen (z.B. durch eine Ausweiskopie). Zur Geltendmachung Ihrer Rechte können Sie die BFH unter der in Ziffer 1 angegebenen Adresse kontaktieren.
+-	Im Falle datenschutzrechtlicher Verstösse können Sie sich an die zuständige Datenschutzaufsichtsbehörde wenden oder die Rechtswege nach Datenschutzgesetzgebung beschreiten.
+\n"
                 android:textSize="14sp"/>
 
         </LinearLayout>
